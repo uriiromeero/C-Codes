@@ -19,7 +19,7 @@ void JugadorLlenaArray(int NumerosIntroducidos[], int CantidadNumeros) {
     for (int i = 0; i < CantidadNumeros; ++i) {
         do {
             printf("Introduce el entero del 1 al 4. Numero: ");
-            scanf_s("%d", &NumerosIntroducidos[i]);
+            scanf("%d", &NumerosIntroducidos[i]);
 
             if (NumerosIntroducidos[i] < 1 || NumerosIntroducidos[i] > 4) {
                 printf("Epp! Este numero no es un numero entre 1 y 4.\n");
