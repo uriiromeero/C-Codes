@@ -2,10 +2,86 @@ using System;
 
 class Programa
 {
+    // Función para generar un número aleatorio en un rango dado
+    static int NumeroAleatorio(int rangoInicio, int rangoFin)
+    {
+        Random aleatorio = new Random();
+        return aleatorio.Next(rangoInicio, rangoFin + 1);
+    }
+
+    // Función para llenar un arreglo con números aleatorios
+    static void AleatorioLlenaArray(int[] NumerosGenerados, int CantidadNumeros)
+    {
+        for (int i = 0; i < CantidadNumeros; ++i)
+        {
+            NumerosGenerados[i] = NumeroAleatorio(1, 4);
+        }
+    }
+
+    // Función para que el jugador llene un arreglo con números introducidos
+    static void JugadorLlenaArray(int[] NumerosIntroducidos, int CantidadNumeros)
+    {
+        for (int i = 0; i < CantidadNumeros; ++i)
+        {
+            do
+            {
+                Console.Write("Introduce el entero del 1 al 4. Número: ");
+                NumerosIntroducidos[i] = Convert.ToInt32(Console.ReadLine());
+
+                if (NumerosIntroducidos[i] < 1 || NumerosIntroducidos[i] > 4)
+                {
+                    Console.WriteLine("¡Ups! Este número no es un número entre 1 y 4.");
+                }
+            } while (NumerosIntroducidos[i] < 1 || NumerosIntroducidos[i] > 4);
+        }
+    }
+
+    // Función para contar el número de aciertos entre dos arreglos
+    static int NumeroNumeroAcierto(int[] NumerosGenerados, int[] NumerosIntroducidos, int CantidadNumeros)
+    {
+        int NumerosAcertados = 0;
+        for (int i = 0; i < CantidadNumeros; ++i)
+        {
+            if (NumerosGenerados[i] == NumerosIntroducidos[i])
+            {
+                NumerosAcertados++;
+            }
+        }
+        return NumerosAcertados;
+    }
+
+    // Función para mostrar aciertos o fallos según la bandera mostrarAciertos
+    static void AciertosFallos(int[] NumerosGenerados, int[] NumerosIntroducidos, int CantidadNumeros, bool mostrarAciertos)
+    {
+        Console.WriteLine(mostrarAciertos ? "Has acertado:" : "Has Fallado:");
+        Console.WriteLine();
+        for (int i = 0; i < CantidadNumeros; ++i)
+        {
+            if ((NumerosGenerados[i] == NumerosIntroducidos[i] && mostrarAciertos) ||
+                (NumerosGenerados[i] != NumerosIntroducidos[i] && !mostrarAciertos))
+            {
+                Console.WriteLine($"Posición {i} has indicado un {NumerosIntroducidos[i]} y había un {NumerosGenerados[i]}");
+                Console.WriteLine();
+            }
+        }
+    }
+
+    // Función para mostrar un resumen de las introducciones
+    static void MuestraAciertosFallos(int[] NumerosGenerados, int[] NumerosIntroducidos, int CantidadNumeros)
+    {
+        Console.WriteLine("El resumen de las introducciones es el siguiente:");
+        for (int i = 0; i < CantidadNumeros; ++i)
+        {
+            Console.WriteLine($"Posición {i}: Se había generado aleatoriamente un {NumerosGenerados[i]} y has indicado que podría haber un {NumerosIntroducidos[i]} por lo tanto has {(NumerosGenerados[i] == NumerosIntroducidos[i] ? "ACERTADO!" : "FALLADO!")}");
+            Console.WriteLine();
+        }
+    }
+
+    // Función principal
     static void Main()
     {
         // Crear objeto Random para generar números aleatorios
-        Random aleatorio = new();
+        Random aleatorio = new Random();
 
         // Generar cantidad aleatoria de números entre 5 y 10
         int CantidadNumeros = aleatorio.Next(5, 11);
@@ -19,46 +95,14 @@ class Programa
         Console.WriteLine($"Se generarán {CantidadNumeros} números aleatorios:");
         Console.WriteLine("++++++++++++++++++++++++++++++++++++++");
 
-        // Generar números aleatorios y almacenar en el arreglo NumerosGenerados
-        for (int i = 0; i < CantidadNumeros; ++i)
-        {
-            NumerosGenerados[i] = aleatorio.Next(1, 5);
-        }
+        // Llenar el arreglo de números generados de manera aleatoria
+        AleatorioLlenaArray(NumerosGenerados, CantidadNumeros);
 
-        // Mensajes para el jugador
-        Console.WriteLine("Es tu turno, jugador. Introduce un número:");
-        Console.WriteLine("Recuerda que solo puedes usar números del 1 al 4!");
-        Console.WriteLine("++++++++++++++++++++++++++++++++++++++");
+        // Llenar el arreglo de números introducidos por el jugador
+        JugadorLlenaArray(NumerosIntroducidos, CantidadNumeros);
 
-        // Inicializar contador de números acertados
-        int NumerosAcertados = 0;
-
-        // Pedir al jugador que introduzca números y comparar con los generados
-        for (int i = 0; i < CantidadNumeros; ++i)
-        {
-            int NumeroIntroducido;
-
-            // Validar que el número introducido esté en el rango correcto
-            do
-            {
-                Console.Write("Introduce el entero del 1 al 4. Número: ");
-                NumeroIntroducido = int.Parse(Console.ReadLine());
-
-                if (NumeroIntroducido < 1 || NumeroIntroducido > 4)
-                {
-                    Console.WriteLine("¡Ups! Este número no está entre 1 y 4.");
-                }
-            } while (NumeroIntroducido < 1 || NumeroIntroducido > 4);
-
-            // Almacenar el número introducido en el arreglo
-            NumerosIntroducidos[i] = NumeroIntroducido;
-
-            // Comparar con el número generado y actualizar el contador
-            if (NumerosIntroducidos[i] == NumerosGenerados[i])
-            {
-                NumerosAcertados++;
-            }
-        }
+        // Contar el número de aciertos
+        int NumerosAcertados = NumeroNumeroAcierto(NumerosGenerados, NumerosIntroducidos, CantidadNumeros);
 
         // Mostrar resultados
         Console.WriteLine("\n");
@@ -68,35 +112,10 @@ class Programa
         Console.WriteLine("++++++++++++++++++++++++++++++++++++++");
 
         // Mostrar aciertos y fallos
-        Console.WriteLine("Has acertado los siguientes:");
-        Console.WriteLine("++++++++++++++++++++++++++++++++++++++\n");
-        for (int i = 0; i < CantidadNumeros; ++i)
-        {
-            if (NumerosIntroducidos[i] == NumerosGenerados[i])
-            {
-                Console.WriteLine($"Posición {i} has indicado un {NumerosIntroducidos[i]} y había un {NumerosGenerados[i]}");
-            }
-        }
+        AciertosFallos(NumerosGenerados, NumerosIntroducidos, CantidadNumeros, true);
+        AciertosFallos(NumerosGenerados, NumerosIntroducidos, CantidadNumeros, false);
 
-        Console.WriteLine("\n");
-        Console.WriteLine("++++++++++++++++++++++++++++++++++++++");
-        Console.WriteLine("Has fallado los siguientes:");
-        Console.WriteLine("++++++++++++++++++++++++++++++++++++++\n");
-        for (int i = 0; i < CantidadNumeros; ++i)
-        {
-            if (NumerosIntroducidos[i] != NumerosGenerados[i])
-            {
-                Console.WriteLine($"Posición {i} has indicado un {NumerosIntroducidos[i]} y había un {NumerosGenerados[i]}");
-            }
-        }
-
-        // Resumen de las introducciones
-        Console.WriteLine("++++++++++++++++++++++++++++++++++++++");
-        Console.WriteLine("El resumen de las introducciones es el siguiente:");
-        Console.WriteLine("++++++++++++++++++++++++++++++++++++++\n");
-        for (int i = 0; i < CantidadNumeros; ++i)
-        {
-            Console.WriteLine($"Posición {i}: Se había generado aleatoriamente un {NumerosGenerados[i]} y has indicado que podría haber un {NumerosIntroducidos[i]} por lo tanto has... {(NumerosGenerados[i] == NumerosIntroducidos[i] ? "ACERTADO!" : "FALLADO!")}\n");
-        }
+        // Mostrar resumen de las introducciones
+        MuestraAciertosFallos(NumerosGenerados, NumerosIntroducidos, CantidadNumeros);
     }
 }
