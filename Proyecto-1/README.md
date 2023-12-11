@@ -13,8 +13,7 @@ Este programa en C++ realiza un análisis estadístico de una serie de productos
    - Proporciona el precio del producto en euros y la cantidad comprada.
 
 3. **Resultados:**
-   > [!NOTE]
-   > - El programa mostrará el importe total de la compra, la media en importe, el código y precio del producto más caro, el precio del producto más barato y los puntos acumulados.
+   - El programa mostrará el importe total de la compra, la media en importe, el código y precio del producto más caro, el precio del producto más barato y los puntos acumulados.
 
 ## Notas
 
