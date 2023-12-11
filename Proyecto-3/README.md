@@ -1,6 +1,10 @@
 # Proyecto 3
 
-Este proyecto implementa un juego simple donde el jugador debe adivinar una serie de números generados aleatoriamente. El programa evalúa cuántos números ha acertado el jugador y proporciona estadísticas sobre el rendimiento.
+Este proyecto se ha creado en 3 lenguajes:
+
+[C] [C#] [C++]
+
+Todos ellos implementan un juego simple donde el jugador debe adivinar una serie de números generados aleatoriamente. El programa evalúa cuántos números ha acertado el jugador y proporciona estadísticas sobre el rendimiento.
 
 ## Funciones
 
