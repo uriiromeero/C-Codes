@@ -1,4 +1,11 @@
-# Estadísticas de Compras en C++
+# Proyecto 1
+
+Este se divide en 2: 
+
+   - Programa en C++ que realiza un analisis estadistico de un supermercado. [Estadísticas de Compras]
+   - Programa en C y C++ que realiza un cálculo de repostaje en gasolinera. [Calculadora de Combustible]
+
+# Estadísticas de Compras
 
 Este programa en C++ realiza un análisis estadístico de una serie de productos comprados, calculando el importe total de la compra, la media en importe de los productos, el código del producto más caro, el precio del producto más caro, el precio del producto más barato y los puntos acumulados por la compra.
 
@@ -24,14 +31,14 @@ Este programa en C++ realiza un análisis estadístico de una serie de productos
 
 ---
 
-# Calculadora de Combustible en C++
+# Calculadora de Combustible
 
-Este programa en C++ calcula el precio por galón y por litro de combustible, considerando descuentos por vales de 1 dólar. Además, determina la cantidad de nuevos vales de descuento obtenidos.
+Este programa en C++ y/o C calcula el precio por galón y por litro de combustible, considerando descuentos por vales de 1 dólar. Además, determina la cantidad de nuevos vales de descuento obtenidos.
 
 ## Instrucciones de Uso
 
 1. **Ejecución:**
-   - Compilar el programa en un entorno que admita C++.
+   - Compilar el programa en un entorno que admita C++ o C.
    - Ejecutar el programa resultante.
 
 2. **Entrada de Datos:**
