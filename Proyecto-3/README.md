@@ -1,6 +1,6 @@
 # Proyecto 3
 
-Este proyecto implementa un juego simple en C# donde el jugador debe adivinar una serie de números generados aleatoriamente. El programa evalúa cuántos números ha acertado el jugador y proporciona estadísticas sobre el rendimiento.
+Este proyecto implementa un juego simple donde el jugador debe adivinar una serie de números generados aleatoriamente. El programa evalúa cuántos números ha acertado el jugador y proporciona estadísticas sobre el rendimiento.
 
 ## Funciones
 
