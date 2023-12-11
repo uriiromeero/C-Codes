@@ -1,0 +1,72 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  proyecto_1:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install build essentials
+      run: sudo apt-get install build-essential
+
+    - name: Build and run compras_supermercado.cpp
+      run: |
+        g++ -o Proyecto-1/compras_supermercado Proyecto-1/compras_supermercado.cpp
+        ./Proyecto-1/compras_supermercado
+
+    - name: Build and run gasolinera.cpp
+      run: |
+        g++ -o Proyecto-1/gasolinera_cpp Proyecto-1/gasolinera.cpp
+        ./Proyecto-1/gasolinera_cpp
+
+    - name: Build and run gasolinera.c
+      run: |
+        gcc -o Proyecto-1/gasolinera_c Proyecto-1/gasolinera.c
+        ./Proyecto-1/gasolinera_c
+
+  proyecto_2:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install build essentials
+      run: sudo apt-get install build-essential
+
+    - name: Build and run capicua.cpp
+      run: |
+        g++ -o Proyecto-2/capicua Proyecto-2/capicua.cpp
+        ./Proyecto-2/capicua
+
+  proyecto_3:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install build essentials
+      run: sudo apt-get install build-essential
+
+    - name: Build and run AdivinaAleatorios.c
+      run: |
+        gcc -o Proyecto-3/AdivinaAleatorios_c Proyecto-3/AdivinaAleatorios.c
+        ./Proyecto-3/AdivinaAleatorios_c
+
+    - name: Build and run AdivinaAleatorios.cpp
+      run: |
+        g++ -o Proyecto-3/AdivinaAleatorios_cpp Proyecto-3/AdivinaAleatorios.cpp
+        ./Proyecto-3/AdivinaAleatorios_cpp
+
+    - name: Build and run AdivinaAleatorios.cs
+      run: |
+        dotnet run --project Proyecto-3/AdivinaAleatorios.csproj
+
