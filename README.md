@@ -14,13 +14,13 @@ En Proyecto 1, encontrarás dos programas, uno en C y otro en C++ para calcular 
 
 En Proyecto 2, encontrarás un programa en C++ que genera y muestra números capicúas hasta 9999 y limita la salida a 150 números capicúas.
 
-- [Generador de Números Capicúas]
+- [Generador de Números Capicúas] [C++]
 
 ## Proyecto 3
 
 En Proyecto 3, encontrarás un juego simple en C# donde el jugador debe adivinar una serie de números generados aleatoriamente.
 
-- [Juego Adivinar Aleatorios]
+- [Juego Adivinar Aleatorios] [C#]
 
 ## Contribuciones
 ¡Todas las contribuciones son bienvenidas!
