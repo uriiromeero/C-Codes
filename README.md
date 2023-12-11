@@ -8,7 +8,7 @@ Contenido del repositorio:
 En Proyecto 1, encontrarás dos programas, uno en C y otro en C++ para calcular compras en un supermercado y otro para una gasolinera. 
 
 - [Compras en Supermercado] [C++]
-- [Compras en Gasolinera] [C++] [C]
+- [Compras en Gasolinera] [C] [C++]
 
 ## Proyecto 2
 
@@ -20,7 +20,7 @@ En Proyecto 2, encontrarás un programa en C++ que genera y muestra números cap
 
 En Proyecto 3, encontrarás un juego simple en C# donde el jugador debe adivinar una serie de números generados aleatoriamente.
 
-- [Juego Adivinar Aleatorios] [C#]
+- [Juego Adivinar Aleatorios] [C] [C#] [C++]
 
 ## Contribuciones
 ¡Todas las contribuciones son bienvenidas!
