@@ -16,5 +16,11 @@ En Proyecto 2, encontrarás un programa en C++ que genera y muestra números cap
 
 - [Generador de Números Capicúas]
 
+## Proyecto 3
+
+En Proyecto 3, encontrarás un juego simple en C# donde el jugador debe adivinar una serie de números generados aleatoriamente.
+
+- [Juego Adivinar Aleatorios]
+
 ## Contribuciones
 ¡Todas las contribuciones son bienvenidas!
