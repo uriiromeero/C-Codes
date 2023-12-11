@@ -1,11 +1,11 @@
-# Estadísticas de Compras
+# Estadísticas de Compras en C++
 
 Este programa en C++ realiza un análisis estadístico de una serie de productos comprados, calculando el importe total de la compra, la media en importe de los productos, el código del producto más caro, el precio del producto más caro, el precio del producto más barato y los puntos acumulados por la compra.
 
 ## Instrucciones de Uso
 
 1. **Ejecución:**
-   - Compilar el programa en un entorno que admita C++ como Visual Studio 2022.
+   - Compilar el programa en un entorno que admita C++.
    - Ejecutar el programa resultante.
 
 2. **Entrada de Datos:**
@@ -24,5 +24,28 @@ Este programa en C++ realiza un análisis estadístico de una serie de productos
 
 ---
 
-*Nota: Este README proporciona una descripción básica del programa y las instrucciones para su uso. Asegúrate de tener un entorno de desarrollo adecuado para compilar y ejecutar programas en C++.*
-*Nota(2): Este programa ha sido creado por un estudiante y podría contener errores de código y/o optimización*
+# Calculadora de Combustible en C++
+
+Este programa en C++ calcula el precio por galón y por litro de combustible, considerando descuentos por vales de 1 dólar. Además, determina la cantidad de nuevos vales de descuento obtenidos.
+
+## Instrucciones de Uso
+
+1. **Ejecución:**
+   - Compilar el programa en un entorno que admita C++.
+   - Ejecutar el programa resultante.
+
+2. **Entrada de Datos:**
+   - Introduce el importe pagado, el número de galones repostados y el número de vales de descuento de 1 dólar utilizados.
+
+3. **Resultados:**
+   - El programa mostrará el precio en dólares por galón y por litro, así como la cantidad de nuevos vales de descuento obtenidos.
+
+## Notas
+
+- El programa realiza conversiones de tipos para facilitar los cálculos.
+- Se considera un límite de descuento basado en el importe pagado.
+- La pausa antes de cerrar la consola (`system("pause");`) es específica para entornos Windows y puede eliminarse o ajustarse según el entorno de ejecución.
+
+---
+
+*Nota: Estos README proporcionan descripciones básicas de los programas y las instrucciones para su uso. Asegúrate de tener un entorno de desarrollo adecuado para compilar y ejecutar programas en C++.*
