@@ -5,10 +5,10 @@ Contenido del repositorio:
 
 ## Compras en Supermercado y Gasolinera
 
-En Proyecto 1, encontrarás dos programas en C y C++ para calcular compras, uno para un supermercado y otro para una gasolinera. 
+En Proyecto 1, encontrarás dos programas, uno en C y otro en C++ para calcular compras en un supermercado y otro para una gasolinera. 
 
-- [Compras en Supermercado]
-- [Compras en Gasolinera]
+- [Compras en Supermercado] [C++]
+- [Compras en Gasolinera] [C++] [C]
 
 ## Números Capicúas
 
