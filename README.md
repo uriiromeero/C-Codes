@@ -23,4 +23,4 @@ En Proyecto 3, encontrarás un juego simple donde el jugador debe adivinar una s
 - [Juego Adivinar Aleatorios] [C] [C#] [C++]
 
 ## Contribuciones
-¡Todas las contribuciones son bienvenidas!
+Todas las contribuciones son bienvenidas
